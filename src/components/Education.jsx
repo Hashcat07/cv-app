@@ -25,7 +25,7 @@ export default function Education() {
   return (
     <div>
       {isEditing && (
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="qualification">
             Qualification:{" "}
             <input
@@ -76,7 +76,7 @@ export default function Education() {
               onChange={handleChange}
             />
           </label>
-          <button type="submit" onSubmit={handleSubmit}>
+          <button type="submit">
             Submit
           </button>
         </form>
