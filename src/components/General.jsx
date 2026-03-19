@@ -26,8 +26,8 @@ export default function General(){
             <form>
             <label htmlFor="name">Name: <input type="text" name="name" value={formData.name} id="name" onChange={handleChange}/></label>
             <label htmlFor="email">Email: <input type="email" name="email" id="email" value={formData.email} onChange={handleChange}/></label>
-            <label htmlFor="phone">Phone: <input type="phone" name="phone" id="phone" value={formData.phone} onChange={handleChange}/></label>
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <label htmlFor="phone">Phone: <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange}/></label>
+            <button type="submit" onSubmit={handleSubmit}>Submit</button>
             </form>
             }
             {!isEditing && <>
