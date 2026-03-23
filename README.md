@@ -1,16 +1,49 @@
-# React + Vite
+# CV Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple CV builder app built with React as part of my frontend learning journey.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was built to practice core React concepts like component architecture,
+useState hooks, controlled inputs, and conditional rendering. The app lets you fill
+out your CV details across three sections, preview them, and edit at any time.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **General Information** — Add your name, email and phone number
+- **Education** — Add your qualification, school, field of study, location and graduation date
+- **Work Experience** — Add your company, position, responsibilities and employment dates
+- Each section has an **Edit** and **Submit** button to toggle between input and display mode
+- Previously entered values are preserved when switching back to edit mode
 
-## Expanding the ESLint configuration
+## Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- CSS
+
+## Getting Started
+
+To run this project locally:
+```bash
+git clone https://github.com/your-username/cv-builder.git
+cd cv-builder
+npm install
+npm run dev
+```
+
+## Live Demo
+
+[View Live](https://cv-app-hashcat07.netlify.app/)
+
+## What I Learned
+
+- How to structure a React app into components
+- Managing form state with useState
+- Controlled inputs and handling changes
+- Conditional rendering with && and ternary operators
+- The importance of conventional commits
+
+## Acknowledgements
+
+- [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/) for the CSS reset
