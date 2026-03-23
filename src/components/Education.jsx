@@ -23,9 +23,9 @@ export default function Education() {
   }
 
   return (
-    <div>
+    <div className="educationInfo container">
       {isEditing && (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="education-form">
           <label htmlFor="qualification">
             Qualification:{" "}
             <input
@@ -82,7 +82,7 @@ export default function Education() {
         </form>
       )}
       {!isEditing && (
-        <>
+        <div className="education-display">
           <h2>Education Qualification</h2>
           <ul>
             <li>
@@ -113,7 +113,7 @@ export default function Education() {
             </li>
           </ul>
           <button onClick={()=>setIsEditing(true)}>Edit</button>
-        </>
+        </div>
       )}
     </div>
   );

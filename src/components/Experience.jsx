@@ -24,9 +24,9 @@ export default function Experience() {
   }
 
   return (
-    <div>
+    <div className="experienceInfo container" >
       {isEditing && (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="experience-form">
           <label>
             Company Name:
             <input
@@ -82,7 +82,7 @@ export default function Experience() {
       )}
 
       {!isEditing && (
-        <>
+        <div className="experience-display">
           <h2>Work Experience</h2>
           <ul>
             <li>
@@ -112,7 +112,7 @@ export default function Experience() {
           </ul>
 
           <button onClick={() => setIsEditing(true)}>Edit</button>
-        </>
+        </div>
       )}
     </div>
   );
