@@ -10,7 +10,12 @@ export default function General({data,onChange}){
     }
 
     function handleSubmit(e){
-        e.preventDefault()
+         e.preventDefault();
+
+    if(!e.target.checkValidity()){
+        e.target.reportValidity();
+        return;
+    }
     }
 
     return (
@@ -18,8 +23,7 @@ export default function General({data,onChange}){
             <form onSubmit={handleSubmit} className="general-form">
             <label htmlFor="name">Name: <input type="text" name="name" value={data.name} id="name" onChange={handleChange}/></label>
             <label htmlFor="email">Email: <input type="email" name="email" id="email" value={data.email} onChange={handleChange}/></label>
-            <label htmlFor="phone">Phone: <input type="tel" name="phone" id="phone" value={data.phone} onChange={handleChange}/></label>
-            <button type="submit">Submit</button>
+            <label htmlFor="phone">Phone: <input type="tel" name="phone" id="phone" value={data.phone} onChange={handleChange} pattern="[0-9]{10}"/></label>
             </form>            
         </div>
     )

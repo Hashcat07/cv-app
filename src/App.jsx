@@ -26,9 +26,11 @@ export default function App() {
   return (
     <div className="root-container">
       <h1 className="app-title">CV Builder</h1>
+      <div className="main-layout">
         <EditArea onChange={{education:setEducationData,general:setGeneralData,experience:setExperienceData}}
         data={{education:educationData,general:generalData,experience:experienceData}}/>
         <DisplayArea data={{education:educationData,general:generalData,experience:experienceData}}/>
+    </div>
     </div>
   );
 }

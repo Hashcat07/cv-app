@@ -66,9 +66,6 @@ export default function Education({data,onChange}) {
               onChange={handleChange}
             />
           </label>
-          <button type="submit">
-            Submit
-          </button>
         </form>
     </div>
   );

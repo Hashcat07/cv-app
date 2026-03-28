@@ -4,11 +4,13 @@ export default function DisplayArea({ data }) {
   return (
     <div className="displayArea container">
 
-      <h2>General Information</h2>
-      <p><span>Name: </span>{general.name}</p>
+      <div className="generalDisplay">
+      <p className="name">{general.name}</p>
+      <div className="comms">
       <p><span>Email: </span>{general.email}</p>
       <p><span>Phone: </span>{general.phone}</p>
-
+    </div>
+    </div>
       <h2>Education Qualification</h2>
       <ul>
         <li>

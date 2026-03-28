@@ -65,8 +65,6 @@ export default function Experience({data,onChange}) {
               onChange={handleChange}
             />
           </label>
-
-          <button type="submit">Submit</button>
         </form>
     </div>
   );
