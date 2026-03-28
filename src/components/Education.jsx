@@ -1,30 +1,20 @@
-import { useState } from "react";
 
-export default function Education() {
-  const [formData, setFormData] = useState({
-    qualification: "",
-    schoolName: "",
-    fieldOfStudy: "",
-    location: "",
-    endDate: "",
-  });
-  const [isEditing, setIsEditing] = useState(true);
+
+export default function Education({data,onChange}) {
 
   function handleChange(e) {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+    onChange({
+        ...data,
+        [e.target.name]: e.target.value
     });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsEditing(false);
   }
 
   return (
     <div className="educationInfo container">
-      {isEditing && (
         <form onSubmit={handleSubmit} className="education-form">
           <label htmlFor="qualification">
             Qualification:{" "}
@@ -32,7 +22,7 @@ export default function Education() {
               type="text"
               name="qualification"
               id="qualification"
-              value={formData.qualification}
+              value={data.qualification}
               onChange={handleChange}
             />
           </label>
@@ -42,7 +32,7 @@ export default function Education() {
               type="text"
               name="schoolName"
               id="schoolName"
-              value={formData.schoolName}
+              value={data.schoolName}
               onChange={handleChange}
             />
           </label>
@@ -52,7 +42,7 @@ export default function Education() {
               type="text"
               name="fieldOfStudy"
               id="field"
-              value={formData.fieldOfStudy}
+              value={data.fieldOfStudy}
               onChange={handleChange}
             />
           </label>
@@ -62,7 +52,7 @@ export default function Education() {
               type="text"
               name="location"
               id="location"
-              value={formData.location}
+              value={data.location}
               onChange={handleChange}
             />
           </label>
@@ -72,7 +62,7 @@ export default function Education() {
               type="date"
               name="endDate"
               id="endDate"
-              value={formData.endDate}
+              value={data.endDate}
               onChange={handleChange}
             />
           </label>
@@ -80,41 +70,6 @@ export default function Education() {
             Submit
           </button>
         </form>
-      )}
-      {!isEditing && (
-        <div className="education-display">
-          <h2>Education Qualification</h2>
-          <ul>
-            <li>
-              <h4>
-                <span>
-                  <strong>{formData.qualification}</strong>
-                </span>
-              </h4>
-              <br />
-              <ol>
-                <li>
-                  <span>School Name: </span>
-                  {formData.schoolName}
-                </li>
-                <li>
-                  <span>Field of Study: </span>
-                  {formData.fieldOfStudy}
-                </li>
-                <li>
-                  <span>Location: </span>
-                  {formData.location}
-                </li>
-                <li>
-                  <span>End Date: </span>
-                  {formData.endDate}
-                </li>
-              </ol>
-            </li>
-          </ul>
-          <button onClick={()=>setIsEditing(true)}>Edit</button>
-        </div>
-      )}
     </div>
   );
 }
